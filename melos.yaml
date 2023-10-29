@@ -1,0 +1,7 @@
+name: libsql_dart
+
+repository: https://github.com/garysm/libsql_dart
+
+packages:
+  - packages/**
+

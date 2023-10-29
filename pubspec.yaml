@@ -1,15 +1,7 @@
-name: libsql_dart
-description: Flutter client library for libSQL.
-version: 0.1.0
-repository: https://github.com/garysm/libsql_dart/tree/main
-issue_tracker: https://github.com/garysm/libsql_dart/issues
+name: libsql_dart_workspace
 
-environment:
-  sdk: ^3.1.2
-
-dependencies:
-  path: ^1.8.0
+environment: 
+  sdk: '>=3.0.0 <4.0.0'
 
 dev_dependencies:
-  lints: ^2.0.0
-  test: ^1.21.0
+  melos: ^3.2.0

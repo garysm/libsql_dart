@@ -1,0 +1,18 @@
+name: libsql_dart
+description: Dart library for libSQL
+version: 0.1.0
+repository: https://github.com/garysm/libsql_dart/tree/main/packages/libsql_dart
+issue_tracker: https://github.com/garysm/libsql_dart/issues
+
+environment:
+  sdk: ^3.1.2
+
+dependencies:
+  ffi: ^2.1.0
+  flutter_rust_bridge: ^1.82.3
+  path: ^1.8.0
+
+dev_dependencies:
+  ffigen: ^9.0.1
+  lints: ^2.0.0
+  test: ^1.21.0

@@ -1,0 +1,2 @@
+[workspace]
+members = ["packages/libsql_dart/native"]
