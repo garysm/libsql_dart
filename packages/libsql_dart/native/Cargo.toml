@@ -6,11 +6,8 @@ edition = "2018"
 [lib]
 crate-type = ["staticlib", "cdylib"]
 
-[build-dependencies]
-flutter_rust_bridge_codegen = "1.82.3"
 
 [dependencies]
-flutter_rust_bridge = "1.82.3"
 tracing-subscriber = "0.3"
 libsql = { git = "https://github.com/libsql/libsql/", rev = "523be13c79e465f452354c3400334269580aad8f" }
 log = "0.4.20"

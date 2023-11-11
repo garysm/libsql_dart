@@ -1,10 +1,10 @@
+
 import 'dart:async';
 import 'dart:ffi';
 import 'dart:io';
 import 'dart:isolate';
 
 import 'flutter_libsql_dart_bindings_generated.dart';
-export 'package:libsql_dart/libsql_dart.dart';
 
 /// A very short-lived native function.
 ///
@@ -51,6 +51,7 @@ final DynamicLibrary _dylib = () {
 
 /// The bindings to the native functions in [_dylib].
 final FlutterLibsqlDartBindings _bindings = FlutterLibsqlDartBindings(_dylib);
+
 
 /// A request to compute `sum`.
 ///

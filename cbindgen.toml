@@ -1,0 +1,4 @@
+language = "C"
+
+[parse]
+include = ["packages/libsql_dart/native"]

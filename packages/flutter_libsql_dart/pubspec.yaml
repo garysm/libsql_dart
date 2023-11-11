@@ -1,6 +1,7 @@
 name: flutter_libsql_dart
 description: A new Flutter FFI plugin project.
-version: 0.1.0
+version: 0.0.1
+homepage:
 
 environment:
   sdk: '>=3.1.2 <4.0.0'
@@ -10,7 +11,6 @@ dependencies:
   flutter:
     sdk: flutter
   plugin_platform_interface: ^2.0.2
-  libsql_dart: ^0.1.0
 
 dev_dependencies:
   ffi: ^2.0.1

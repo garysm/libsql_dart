@@ -1,7 +1,6 @@
-use once_cell::sync::OnceCell;
 use std::cell::RefCell;
-use std::sync::{Arc, Weak};
-use tokio::{runtime::Runtime, sync::Mutex};
+use std::sync::Arc;
+use tokio::sync::Mutex;
 
 
 // TODO Mirror types from libsql
@@ -126,24 +125,3 @@ pub fn convert_sqlite_code(code: u32) -> String {
         _ => format!("UNKNOWN_SQLITE_ERROR_{}", code),
     }
 }
-
-// struct Statement {
-//     conn: Weak<Mutex<libsql::Connection>>,
-//     stmt: Weak<Mutex<libsql::Statement>>,
-//     raw: RefCell<bool>,
-//     safe_ints: RefCell<bool>,
-// }
-
-// impl<'a> Finalize for Statement {}
-
-// // TODO: impl Statement
-
-// struct Rows {
-//     rows: RefCell<libsql::Rows>,
-//     raw: bool,
-//     safe_ints: bool,
-// }
-
-// impl Finalize for Rows {}
-
-// // TODO: impl Rows
