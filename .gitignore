@@ -32,6 +32,5 @@ build/
 .flutter-plugins-dependencies
 
 # Rust related
-/target/
-/Cargo.lock
+target/
 /platform-build
