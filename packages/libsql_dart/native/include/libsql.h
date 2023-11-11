@@ -1,35 +1,36 @@
-#include <cstdarg>
-#include <cstdint>
-#include <cstdlib>
-#include <ostream>
-#include <new>
+#ifndef LIBSQL_EXPERIMENTAL_H
+#define LIBSQL_EXPERIMENTAL_H
 
-struct libsql_connection;
+#include <stdint.h>
 
-struct libsql_database;
+typedef struct libsql_connection libsql_connection;
 
-struct libsql_row;
+typedef struct libsql_database libsql_database;
 
-struct libsql_rows;
+typedef struct libsql_row libsql_row;
 
-struct libsql_rows_future;
+typedef struct libsql_rows libsql_rows;
 
-using libsql_database_t = const libsql_database*;
+typedef struct libsql_rows_future libsql_rows_future;
 
-using libsql_connection_t = const libsql_connection*;
+typedef const libsql_database *libsql_database_t;
 
-using libsql_rows_t = const libsql_rows*;
+typedef const libsql_connection *libsql_connection_t;
 
-using libsql_rows_future_t = const libsql_rows_future*;
+typedef const libsql_rows *libsql_rows_t;
 
-using libsql_row_t = const libsql_row*;
+typedef const libsql_rows_future *libsql_rows_future_t;
 
-struct blob {
+typedef const libsql_row *libsql_row_t;
+
+typedef struct {
   const char *ptr;
   int len;
-};
+} blob;
 
+#ifdef __cplusplus
 extern "C" {
+#endif // __cplusplus
 
 int libsql_sync(libsql_database_t db, const char **out_err_msg);
 
@@ -47,10 +48,7 @@ int libsql_connect(libsql_database_t db, libsql_connection_t *out_conn, const ch
 
 void libsql_disconnect(libsql_connection_t conn);
 
-int libsql_execute(libsql_connection_t conn,
-                   const char *sql,
-                   libsql_rows_t *out_rows,
-                   const char **out_err_msg);
+int libsql_execute(libsql_connection_t conn, const char *sql, libsql_rows_t *out_rows, const char **out_err_msg);
 
 void libsql_free_rows(libsql_rows_t res);
 
@@ -80,4 +78,8 @@ int libsql_get_blob(libsql_row_t res, int col, blob *out_blob, const char **out_
 
 void libsql_free_blob(blob b);
 
+#ifdef __cplusplus
 } // extern "C"
+#endif // __cplusplus
+
+#endif /* LIBSQL_EXPERIMENTAL_H */

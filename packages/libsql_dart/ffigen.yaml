@@ -1,0 +1,7 @@
+
+name: 'LibSQLBindings'
+output: 'libsql_bindings.dart'
+description: 'Bindings for LibSQL'
+headers:
+  entry-points:
+    - 'native/include/libsql.h'
